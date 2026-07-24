@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="tight_zigzag_maze">
+    <include><uri>model://ground_plane</uri></include>
+    <include><uri>model://sun</uri></include>
+
+    <model name="outer_n"><static>true</static><pose>0 3.0 0.4 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5 0.05 0.8</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5 0.05 0.8</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient></material></visual>
+      </link>
+    </model>
+    <model name="outer_s"><static>true</static><pose>0 -3.0 0.4 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>5 0.05 0.8</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>5 0.05 0.8</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient></material></visual>
+      </link>
+    </model>
+    <model name="outer_e"><static>true</static><pose>2.5 0 0.4 0 0 1.5708</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>6 0.05 0.8</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>6 0.05 0.8</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient></material></visual>
+      </link>
+    </model>
+    <model name="outer_w"><static>true</static><pose>-2.5 0 0.4 0 0 1.5708</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>6 0.05 0.8</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>6 0.05 0.8</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient></material></visual>
+      </link>
+    </model>
+    <model name="zz1"><static>true</static><pose>-0.8 1.5 0.4 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>3.5 0.05 0.8</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>3.5 0.05 0.8</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient></material></visual>
+      </link>
+    </model>
+    <model name="zz2"><static>true</static><pose>0.8 0 0.4 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>3.5 0.05 0.8</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>3.5 0.05 0.8</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient></material></visual>
+      </link>
+    </model>
+    <model name="zz3"><static>true</static><pose>-0.8 -1.5 0.4 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>3.5 0.05 0.8</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>3.5 0.05 0.8</size></box></geometry>
+          <material><ambient>0.6 0.6 0.6 1</ambient></material></visual>
+      </link>
+    </model>
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+    </physics>
+  </world>
+</sdf>
